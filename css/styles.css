@@ -163,7 +163,7 @@ button {
   height: 4px;
   border-radius: 2px;
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
 }
 
@@ -397,13 +397,13 @@ button {
   border: 1px solid var(--color-light-slate);
   border-radius: 4px;
   color: var(--color-light-slate);
-  transition-property: border, color;
+  transition-property: border-color, color;
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
 }
 .customers-link:hover,
 .customers-link:focus {
-  border: 1px solid var(--color-ocean);
+  border-color: var(--color-ocean);
   color: var(--color-ocean);
 }
 
@@ -504,7 +504,7 @@ button {
   left: 0;
   background-color: var(--color-navy-blue-modal);
   visibility: visible;
-  transition: opasyty 250ms var(--timing-function); visibility: visible;
+  transition: opasyty 250ms var(--timing-function); visibility: 250ms var(--timing-function);
   
 }
 
@@ -520,7 +520,9 @@ button {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 408px;
-  height: 584px;
+  min-height: 584px;
+
+  transition: transform 250ms var(--timing-function);
 
   background-color: var(--color-dairy);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -563,7 +565,7 @@ background-color: var(--color-ocean);
 
 .modal-close-icon:hover,
 .modal-close-icon:focus {
-  fill: var(--color-white);
+fill: #ffffff;
 }
 
 /**
@@ -592,7 +594,7 @@ background-color: var(--color-ocean);
   flex: none;
   white-space: nowrap;
 
-  transition-property: background-color, color, padding, border, box-shadow;
+  transition-property: background-color, color, border-color, box-shadow;
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
 }
@@ -602,7 +604,7 @@ background-color: var(--color-ocean);
   background-color: var(--color-ocean);
   color: var(--color-white);
   padding: 12px 24px;
-  border: 1px solid transparent;
+  border: transparent;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
@@ -680,9 +682,18 @@ background-color: var(--color-ocean);
 
 }
 .overlay-text {
+  position: absolute;
+  top: 0;
+  padding: 40px 32px;
+  transform: translateY(100%);
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.02em;
   color: var(--color-cloud);
+}
+
+.portfolio-projects-item:hover .overlay-text, .portfolio-projects-item:focus .overlay-text {
+  transform: translateY(0);
+
 }
