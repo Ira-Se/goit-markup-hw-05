@@ -124,7 +124,7 @@ button {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--color-iris);
+  color: #404bbf;
   margin-right: 76px;
 }
 
@@ -504,7 +504,7 @@ button {
   left: 0;
   background-color: var(--color-navy-blue-modal);
   visibility: visible;
-  transition: opasyty 250ms var(--timing-function); visibility: 250ms var(--timing-function);
+  transition: opasyty 250ms var(--timing-function), visibility 250ms var(--timing-function);
   
 }
 
@@ -520,7 +520,7 @@ button {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 408px;
-  min-height: 584px;
+  min-height: 576px;
 
   transition: transform 250ms var(--timing-function);
 
@@ -563,9 +563,9 @@ background-color: var(--color-ocean);
   transition-timing-function: var(--timing-function);
 }
 
-.modal-close-icon:hover,
-.modal-close-icon:focus {
-fill: #ffffff;
+.modal-close-btn:hover .modal-close-icon,
+.modal-close-btn:focus .modal-close-icon {
+fill: var(--color-white);
 }
 
 /**
@@ -664,7 +664,7 @@ fill: #ffffff;
   overflow: hidden;
   
 }
-.overlay {
+/* .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -680,17 +680,22 @@ fill: #ffffff;
 .portfolio-projects-item:hover .overlay, .portfolio-projects-item:focus .overlay {
   transform: translateY(0);
 
-}
+} */
 .overlay-text {
   position: absolute;
   top: 0;
-  padding: 40px 32px;
+  left: 0;
+  padding: 40px 32px 164px;
   transform: translateY(100%);
+  width: 100%;
+  height: 100%;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.02em;
   color: var(--color-cloud);
+  background-color: var(--color-iris);
+  transition: transform 250ms var(--timing-function);
 }
 
 .portfolio-projects-item:hover .overlay-text, .portfolio-projects-item:focus .overlay-text {
