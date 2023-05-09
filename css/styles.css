@@ -87,7 +87,7 @@ img {
   display: block;
 }
 .link {
-  transition-duration: none;
+  text-decoration: none;
 }
 .list {
   list-style: none;
@@ -143,7 +143,7 @@ button {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #404bbf;
+  color: var(--color-navy-blue);
   display: block;
   padding: 24px 0;
 
@@ -651,6 +651,7 @@ button {
   text-align: center;
 }
 
+
 /**
   |============================
   | Overlay styles
@@ -669,9 +670,8 @@ button {
   transform: translateY(100%);
   width: 100%;
   height: 100%;
-  font-weight: 400;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--color-cloud);
   background-color: var(--color-iris);
